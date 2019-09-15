@@ -1,0 +1,6213 @@
+{
+  "name": "My first skill",
+  "intents": [
+    {
+      "intent": "教授の情報を求める",
+      "examples": [
+        {
+          "text": "教授のメールアドレスをしりたい"
+        },
+        {
+          "text": "所属学部・学科を教えて"
+        },
+        {
+          "text": "連絡先を教えて"
+        },
+        {
+          "text": "詳細情報を教えて"
+        },
+        {
+          "text": "教授のメールアドレスを知りたい"
+        },
+        {
+          "text": "教授のメールアドレスを教えて"
+        },
+        {
+          "text": "教授の連絡先を教えて"
+        },
+        {
+          "text": "教授について"
+        },
+        {
+          "text": "教授について知りたい"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "研究室",
+      "examples": [
+        {
+          "text": "研究室について知りたい"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "挨拶",
+      "examples": [
+        {
+          "text": "こんにちは"
+        },
+        {
+          "text": "おはようございます"
+        },
+        {
+          "text": "こんばんは"
+        },
+        {
+          "text": "やぁ"
+        },
+        {
+          "text": "おはよう"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "学科",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "環境システム学科",
+          "synonyms": [
+            "環シス"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "電子工学科",
+          "synonyms": [
+            "電子"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "医生命システム学科",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "機械システム工学科",
+          "synonyms": [
+            "機シス"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "機能分子・生命化学科",
+          "synonyms": [
+            "キノブン",
+            "きのぶん"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "化学システム創成工学科",
+          "synonyms": [
+            "化シス"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "エネルギー機械工学科",
+          "synonyms": [
+            "エネ機"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "数理システム学科",
+          "synonyms": [
+            "数理"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "インテリジェント情報工学科",
+          "synonyms": [
+            "インテリ"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "医工学科",
+          "synonyms": [
+            "医工"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "情報システムデザイン学科",
+          "synonyms": [
+            "情シス"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "医情報学科",
+          "synonyms": [
+            "医情報"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "電気工学科",
+          "synonyms": [
+            "電気"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "京田辺_学部内に学科が存在するもの",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "理工学部",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "生命医科学部",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "キャンパス",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "今出川",
+          "synonyms": [
+            "今出川キャンパス"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "京田辺",
+          "synonyms": [
+            "京田辺キャンパス"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "成否",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "いいえ",
+          "synonyms": [
+            "No"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "はい",
+          "synonyms": [
+            "Yes"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "教授名",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "横川 隆一",
+          "synonyms": [
+            "横川"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "山本　大吾",
+          "synonyms": [
+            "山本"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "吉田　幹生",
+          "synonyms": [
+            "吉田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "橋本　雅彦",
+          "synonyms": [
+            "橋本"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "塚越　一彦",
+          "synonyms": [
+            "塚越"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "土屋　活美",
+          "synonyms": [
+            "土屋"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "白川　善幸",
+          "synonyms": [
+            "白川"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "齋藤　誠慈",
+          "synonyms": [
+            "齋藤",
+            "さいとう"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "塩井　章久",
+          "synonyms": [
+            "塩井"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "森　康維",
+          "synonyms": [
+            "森"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "松本　道明",
+          "synonyms": [
+            "松本"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "竹中　壮",
+          "synonyms": [
+            "竹中"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "大西　慶一郎",
+          "synonyms": [
+            "大西"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "松本　孝広",
+          "synonyms": [
+            "松本"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "北岸　宏亮",
+          "synonyms": [
+            "北岸"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "遠藤　太佳嗣",
+          "synonyms": [
+            "遠藤"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "土井　貴之",
+          "synonyms": [
+            "土井"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "水谷　義",
+          "synonyms": [
+            "水谷"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "古賀　智之",
+          "synonyms": [
+            "古賀"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "小寺　政人",
+          "synonyms": [
+            "小寺"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "木村　佳文",
+          "synonyms": [
+            "木村"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "加藤　将樹",
+          "synonyms": [
+            "加藤"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "稲葉　稔",
+          "synonyms": [
+            "稲葉"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "人見　穣",
+          "synonyms": [
+            "人見"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "廣田　健",
+          "synonyms": [
+            "廣田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "東　信行",
+          "synonyms": [
+            "東"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "原　峻平",
+          "synonyms": [
+            "原"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "湯浅　元仁",
+          "synonyms": [
+            "湯浅"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "伊藤　彰人",
+          "synonyms": [
+            "伊藤"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "田中　達也",
+          "synonyms": [
+            "田中"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "坂本　喜彦",
+          "synonyms": [
+            "和田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "BETTINA GILDENHARD",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "西川 喜代孝",
+          "synonyms": [
+            "西川"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "中谷内　一也",
+          "synonyms": [
+            "中谷内"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "吉田　優子",
+          "synonyms": [
+            "吉田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "渡邊　芳英",
+          "synonyms": [
+            "渡邊",
+            "わたなべ"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "渡邊裕也",
+          "synonyms": [
+            "渡邊",
+            "わたなべ"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "齋藤 直人",
+          "synonyms": [
+            "齋藤",
+            "さいとう"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "内田　尚孝",
+          "synonyms": [
+            "内田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "竹島　康博",
+          "synonyms": [
+            "竹島"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "竹原　卓真",
+          "synonyms": [
+            "竹原"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "竹井　義次",
+          "synonyms": [
+            "竹井"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "近藤　弘一",
+          "synonyms": [
+            "近藤"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "長岡　直人",
+          "synonyms": [
+            "長岡"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "稲岡　恭二",
+          "synonyms": [
+            "稲岡"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "宮本　博之",
+          "synonyms": [
+            "宮本"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "大窪　和也",
+          "synonyms": [
+            "大窪"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "松川　真美",
+          "synonyms": [
+            "松川"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "鈴木　将之",
+          "synonyms": [
+            "鈴木"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "佐々木　和可緒",
+          "synonyms": [
+            "佐々木"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "出口　博之",
+          "synonyms": [
+            "出口"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "松村　恵理子",
+          "synonyms": [
+            "松村"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "程 俊",
+          "synonyms": [
+            "程",
+            "てい",
+            "ていしゅん"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "芳賀　博英",
+          "synonyms": [
+            "芳賀",
+            "はが",
+            "はがひろひで",
+            "宮崎駿"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "橋本　雅文",
+          "synonyms": [
+            "橋本",
+            "はしもと",
+            "はしもとまさふみ"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "金田　重郎",
+          "synonyms": [
+            "金田",
+            "かねだ",
+            "かねだしげお",
+            "きんたおもろ",
+            "金田符号の人"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "加藤　恒夫",
+          "synonyms": [
+            "加藤",
+            "かとう",
+            "かとうつねお",
+            "首にギプス"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "三木　光範",
+          "synonyms": [
+            "みき",
+            "三木",
+            "みきみつのり",
+            "えち"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "土屋　誠司",
+          "synonyms": [
+            "つちや",
+            "つちやせいじ",
+            "土屋",
+            "WAPLIの神"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "渡部　広一",
+          "synonyms": [
+            "渡部",
+            "わたべ",
+            "わたべひろかず",
+            "線形補間"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "桂井　麻里衣",
+          "synonyms": [
+            "桂井",
+            "かつらい",
+            "かつらいまりえ",
+            "スタッツくん"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "木村　共孝",
+          "synonyms": [
+            "木村",
+            "きむら",
+            "きむらともたか"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "和田　元",
+          "synonyms": [
+            "和田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "笹田　昌弘",
+          "synonyms": [
+            "笹田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "槇原　絵里奈",
+          "synonyms": [
+            "槇原",
+            "まきはら",
+            "まきはらえりな",
+            "まっきー",
+            "マッキー"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "小山　大介",
+          "synonyms": [
+            "小山"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "吉門　進三",
+          "synonyms": [
+            "吉門"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "辻内　伸好",
+          "synonyms": [
+            "辻内"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "山本　誠一",
+          "synonyms": [
+            "山本"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "高橋　康人",
+          "synonyms": [
+            "高橋"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "新庄　雅斗",
+          "synonyms": [
+            "新庄"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "山口　博司",
+          "synonyms": [
+            "山口"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "平田　勝哉",
+          "synonyms": [
+            "平田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "佐藤　祐喜",
+          "synonyms": [
+            "佐藤"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "小武内　清貴",
+          "synonyms": [
+            "小武内"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "青山　栄一",
+          "synonyms": [
+            "青山"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "千田　二郎",
+          "synonyms": [
+            "千田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "高岡　正憲",
+          "synonyms": [
+            "高岡"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "片桐　滋",
+          "synonyms": [
+            "片桐"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "辻　幹男",
+          "synonyms": [
+            "辻"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "大崎　美穂",
+          "synonyms": [
+            "大崎"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "大久保　雅史",
+          "synonyms": [
+            "大久保"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "馬場　吉弘",
+          "synonyms": [
+            "馬場"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "戸田　裕之",
+          "synonyms": [
+            "戸田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "多久和　英樹",
+          "synonyms": [
+            "多久和"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "藤原　耕二",
+          "synonyms": [
+            "藤原"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "佐藤　健哉",
+          "synonyms": [
+            "佐藤"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "大谷　直毅",
+          "synonyms": [
+            "大谷"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "下原　勝憲",
+          "synonyms": [
+            "下原"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "高橋　和彦",
+          "synonyms": [
+            "高橋"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "イヴァン　タネヴ",
+          "synonyms": [
+            "イヴァン",
+            "IVAN"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "井上　馨",
+          "synonyms": [
+            "井上"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "粕谷　俊郎",
+          "synonyms": [
+            "粕谷"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "小板　隆浩",
+          "synonyms": [
+            "小板"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "岩井　誠人",
+          "synonyms": [
+            "岩井"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "松岡　敬",
+          "synonyms": [
+            "松岡"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "土屋　隆生",
+          "synonyms": [
+            "土屋"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "加藤　利次",
+          "synonyms": [
+            "加藤"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "衣斐　信介",
+          "synonyms": [
+            "衣斐"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "廣垣　俊樹",
+          "synonyms": [
+            "廣垣"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "野口　尚史",
+          "synonyms": [
+            "野口"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "坂本　英俊",
+          "synonyms": [
+            "坂本"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "余語　真夫",
+          "synonyms": [
+            "余語"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "毛利　真弓",
+          "synonyms": [
+            "毛利"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "武藤　崇",
+          "synonyms": [
+            "武藤"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "畑　敏道",
+          "synonyms": [
+            "畑"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "北條達也",
+          "synonyms": [
+            "北條"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "嶋　大樹",
+          "synonyms": [
+            "嶋"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "山本　妙",
+          "synonyms": [
+            "山本"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "南井　正廣",
+          "synonyms": [
+            "南井"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "松木　啓子",
+          "synonyms": [
+            "松木"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "渡邉彰",
+          "synonyms": [
+            "渡邉",
+            "わたなべ"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "PETER NEFF",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "長谷部　陽一郎",
+          "synonyms": [
+            "長谷部"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "中村　艶子",
+          "synonyms": [
+            "中村"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "中西　裕樹",
+          "synonyms": [
+            "中西"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "中田　賀之",
+          "synonyms": [
+            "中田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "唐　顥芸",
+          "synonyms": [
+            "唐"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "寺西　隆弘",
+          "synonyms": [
+            "寺西"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "玉井　史絵",
+          "synonyms": [
+            "玉井"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "竹田　宗継",
+          "synonyms": [
+            "竹田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "須藤　潤",
+          "synonyms": [
+            "須藤"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "鈴木　美紀子",
+          "synonyms": [
+            "鈴木"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "鈴木　伸子",
+          "synonyms": [
+            "鈴木"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "JONATHAN GOUJON",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "窪田　光男",
+          "synonyms": [
+            "窪田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "GAVIN JOHN BROOKS",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "河原　大輔",
+          "synonyms": [
+            "河原"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "郭　雲輝",
+          "synonyms": [
+            "郭"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "EDWARD OGLE HEARN",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "WILMER CAMERON ROMNEY",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "伊勢　晃",
+          "synonyms": [
+            "伊勢"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "田中　あゆみ",
+          "synonyms": [
+            "田中"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "杉若　弘子",
+          "synonyms": [
+            "杉若"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "白井　真理子",
+          "synonyms": [
+            "白井"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "佐藤　豪",
+          "synonyms": [
+            "佐藤"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "神山　貴弥",
+          "synonyms": [
+            "神山"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "大屋　藍子",
+          "synonyms": [
+            "大屋"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "及川　昌典",
+          "synonyms": [
+            "及川"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "石川　信一",
+          "synonyms": [
+            "石川"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "青山　謙二郎",
+          "synonyms": [
+            "青山"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "上林清孝",
+          "synonyms": [
+            "上林"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "鷲谷洋輔",
+          "synonyms": [
+            "若原"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "若原卓",
+          "synonyms": [
+            "若原"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "横山勝彦",
+          "synonyms": [
+            "横山"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "松倉啓太",
+          "synonyms": [
+            "松倉"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "藤澤義彦",
+          "synonyms": [
+            "藤澤"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "福岡義之",
+          "synonyms": [
+            "福岡"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "二宮浩彰",
+          "synonyms": [
+            "二宮"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "中村康雄",
+          "synonyms": [
+            "中村"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "田附俊一",
+          "synonyms": [
+            "田附"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "竹田正樹",
+          "synonyms": [
+            "竹田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "髙倉久志",
+          "synonyms": [
+            "髙倉"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "高木俊",
+          "synonyms": [
+            "高木"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "庄子博人",
+          "synonyms": [
+            "庄子"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "河西正博",
+          "synonyms": [
+            "河西"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "加藤久詞",
+          "synonyms": [
+            "加藤"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "脇田　里子",
+          "synonyms": [
+            "脇田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "内山　伊知郎",
+          "synonyms": [
+            "内山"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "海老根直之",
+          "synonyms": [
+            "海老根"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "栁田昌彦",
+          "synonyms": [
+            "栁田",
+            "昌彦"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "興津　真理子",
+          "synonyms": [
+            "興津"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "石倉忠夫",
+          "synonyms": [
+            "石倉"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "石井好二郎",
+          "synonyms": [
+            "石井"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "井澤鉄也",
+          "synonyms": [
+            "井澤"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "新井彩",
+          "synonyms": [
+            "新井"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "石浦 章一",
+          "synonyms": [
+            "石浦"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "祝迫 惠子",
+          "synonyms": [
+            "祝迫"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "和久 剛",
+          "synonyms": [
+            "和久"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "小林 聡",
+          "synonyms": [
+            "小林"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "三田　雄一郎",
+          "synonyms": [
+            "三田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "浦野 泰臣",
+          "synonyms": [
+            "浦野"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "野口 範子",
+          "synonyms": [
+            "野口"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "堀 哲也",
+          "synonyms": [
+            "堀"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "池川 雅哉",
+          "synonyms": [
+            "池川"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "角田 伸人",
+          "synonyms": [
+            "角田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "宮坂 知宏",
+          "synonyms": [
+            "宮坂"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "舟本 聡",
+          "synonyms": [
+            "舟本"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "米井 嘉一",
+          "synonyms": [
+            "米井"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "市川 寛",
+          "synonyms": [
+            "市川"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "高橋 美帆",
+          "synonyms": [
+            "高橋"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "貞包 浩一朗",
+          "synonyms": [
+            "貞包"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "日和 悟",
+          "synonyms": [
+            "日和"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "廣安 知之",
+          "synonyms": [
+            "廣安"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "小林 耕太",
+          "synonyms": [
+            "小林"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "飛龍 志津子",
+          "synonyms": [
+            "飛龍"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "松島 正知",
+          "synonyms": [
+            "松島"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "秋山 いわき",
+          "synonyms": [
+            "秋山"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "渡辺 好章",
+          "synonyms": [
+            "渡辺"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "大江 洋平",
+          "synonyms": [
+            "大江"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "太田 哲男",
+          "synonyms": [
+            "太田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "剣持 貴弘",
+          "synonyms": [
+            "剣持"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "積際 徹",
+          "synonyms": [
+            "積際"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "山本 浩司",
+          "synonyms": [
+            "山本"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "森田 有亮",
+          "synonyms": [
+            "森田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "仲町 英治",
+          "synonyms": [
+            "仲町"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "伊藤 利明",
+          "synonyms": [
+            "伊藤"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "田中 和人",
+          "synonyms": [
+            "田中"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "片山 傳生",
+          "synonyms": [
+            "片山"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "奥村 直毅",
+          "synonyms": [
+            "奥村"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "小泉 範子",
+          "synonyms": [
+            "小泉"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "津田　博史",
+          "synonyms": [
+            "津田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "川口　周",
+          "synonyms": [
+            "川口"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "溝畑　潔",
+          "synonyms": [
+            "溝畑"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "河野　明",
+          "synonyms": [
+            "河野"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "今井　仁司",
+          "synonyms": [
+            "今井"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "長谷川　元洋",
+          "synonyms": [
+            "長谷川"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "横尾　頼子",
+          "synonyms": [
+            "横尾"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "赤尾　聡史",
+          "synonyms": [
+            "赤尾"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "山根　省三",
+          "synonyms": [
+            "山根"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "関　穣慶",
+          "synonyms": [
+            "関"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "福間　浩司",
+          "synonyms": [
+            "福間"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "盛満　正嗣",
+          "synonyms": [
+            "盛満"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "大園　享司",
+          "synonyms": [
+            "大園"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "堤　浩之",
+          "synonyms": [
+            "堤"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "林田　明",
+          "synonyms": [
+            "林田"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "後藤　琢也",
+          "synonyms": [
+            "後藤"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "田原　義朗",
+          "synonyms": [
+            "田原"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "田村　隆",
+          "synonyms": [
+            "田村"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "系",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "情報系",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "機械系",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "環境系",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "化学系",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "数理系",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "電気系",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "京田辺_学部内に学科が存在しないもの",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "スポーツ健康科学部",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "グローバル・コミュニケーション学部",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "心理学部",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "文化情報学部",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "同姓",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "木村",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "松本",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "橋本",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "渡邊",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "田中",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "竹田",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "高橋",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "鈴木",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "齋藤",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "野口",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "中村",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "伊藤",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "佐藤",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "加藤",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "吉田",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "土屋",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "和田",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "小林",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "山本",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-currency",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "学部",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "スポーツ健康科学部",
+          "synonyms": [
+            "スポ健"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "生命医科学部",
+          "synonyms": [
+            "生命"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "心理学部",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "理工学部",
+          "synonyms": [
+            "理工"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "文化情報学部",
+          "synonyms": [
+            "文情"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "グローバル・コミュニケーション学部",
+          "synonyms": [
+            "グロコミュ"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "skill_id": "63d19c15-696b-4e80-ae6d-fce0fefe46aa",
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "response_condition",
+      "title": "response_7_1568523798165",
+      "output": {
+        "text": {
+          "values": [
+            "研究室紹介：https://www.cis.doshisha.ac.jp/staff/"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_5_1568453660567",
+      "conditions": "@京田辺_学部内に学科が存在しないもの:文化情報学部",
+      "dialog_node": "response_7_1568523798165",
+      "previous_sibling": "response_7_1568523796411"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1568523794502",
+      "output": {
+        "text": {
+          "values": [
+            "アメリカ研究クラスター\n池田啓子:志向館266\nGavin James CAMPBELL:志向館280\n秋林こずえ:志向館267\n岡野八代:志向館287\n菅野優香:志向館273\nFanon Che WILKINS:志向館283\nDaniel Eric McKAY:志向館262\n\n現代アジア研究クラスター\n巌善平:志向館264\n太田修:志向館269\n小山田英治:志向館274\n冨山一郎:志向館265\n錢鷗:志向館271\n村田雄二郎:志向館268\n松谷実のり:志向館279\n\nグローバル社会研究クラスター\n内藤正典:志向館260\n中西久枝:志向館284\n峯陽一:志向館286\n松久玲子:志向館282\nAnne GONON:志向館263\n菊地恵介:志向館272\nSeifudein ADEM:志向館270"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_5_1568453660567",
+      "conditions": "@京田辺_学部内に学科が存在しないもの:(グローバル・コミュニケーション学部)",
+      "dialog_node": "response_2_1568523794502",
+      "previous_sibling": "response_3_1568523790241"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1568523796411",
+      "output": {
+        "text": {
+          "values": [
+            "ホーム：https://sports.doshisha.ac.jp/graduate/\nスタッフ一覧：https://sports.doshisha.ac.jp/graduate/staff/staff.html"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_5_1568453660567",
+      "conditions": "@京田辺_学部内に学科が存在しないもの:スポーツ健康科学部",
+      "dialog_node": "response_7_1568523796411",
+      "previous_sibling": "response_2_1568523794502"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1568523790241",
+      "output": {
+        "text": {
+          "values": [
+            "大学院紹介ページ：https://psych.doshisha.ac.jp/graduate/\n教員・卒業論文紹介ページ：https://psych.doshisha.ac.jp/professors/"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_5_1568453660567",
+      "conditions": "@京田辺_学部内に学科が存在しないもの:心理学部",
+      "dialog_node": "response_3_1568523790241"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347970040",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　環境システム学科　tgoto@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(後藤　琢也)",
+      "dialog_node": "response_2_1567347970040",
+      "previous_sibling": "response_6_1567347969139"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347933484",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医情報学科 kkobayas@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(小林 耕太)",
+      "dialog_node": "response_2_1567347933484",
+      "previous_sibling": "response_10_1567347932526"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1567347927548",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医生命システム学科　sfunamot@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(舟本 聡)",
+      "dialog_node": "response_9_1567347927548",
+      "previous_sibling": "response_6_1567347925956"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347792341",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　情報システムデザイン学科　itanev@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(イヴァン　タネヴ)",
+      "dialog_node": "response_2_1567347792341",
+      "previous_sibling": "response_1_1567347737942"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347859167",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　htang@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(唐　顥芸)",
+      "dialog_node": "response_2_1567347859167",
+      "previous_sibling": "response_7_1567347858386"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567345304600",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　インテリジェント情報工学科　mkatsura@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(桂井　麻里衣)",
+      "dialog_node": "response_8_1567345304600",
+      "previous_sibling": "response_6_1567344928899"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567347872672",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部 \tehearnmail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(EDWARD OGLE HEARN)",
+      "dialog_node": "response_3_1567347872672",
+      "previous_sibling": "response_10_1567347871609"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567348002800",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　エネルギー機械工学科　tatanaka@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(田中　達也)",
+      "dialog_node": "response_3_1567348002800",
+      "previous_sibling": "response_7_1567348005773"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567347949832",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　数理システム学科"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(津田　博史)",
+      "dialog_node": "response_4_1567347949832",
+      "previous_sibling": "response_2_1567347948815"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1567347721608",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電子工学科　ohtani@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(大谷　直毅)",
+      "dialog_node": "response_9_1567347721608",
+      "previous_sibling": "response_7_1567347345013"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567347890868",
+      "output": {
+        "text": {
+          "values": [
+            "心理学部　kaoyama@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(青山　謙二郎)",
+      "dialog_node": "response_5_1567347890868",
+      "previous_sibling": "response_2_1567347854127"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567344928899",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　インテリジェント情報工学科　hwatabe@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(渡部　広一)",
+      "dialog_node": "response_6_1567344928899",
+      "previous_sibling": "response_8_1567344917990"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567347876665",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　NULL"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(伊勢　晃)",
+      "dialog_node": "response_4_1567347876665",
+      "previous_sibling": "response_7_1567347875880"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567347981416",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　化学システム創成工学科　mmatsumo@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(松本　道明)",
+      "dialog_node": "response_10_1567347981416",
+      "previous_sibling": "response_5_1567347980182"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567347988245",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機能分子・生命化学科　tmizutan@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(水谷　義)",
+      "dialog_node": "response_5_1567347988245",
+      "previous_sibling": "response_2_1567347987331"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567347940964",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医工学科 ttsumugi@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(積際 徹)",
+      "dialog_node": "response_7_1567347940964",
+      "previous_sibling": "response_9_1567347940104"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567347999310",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機能分子・生命化学科　nhigashi@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(東　信行)",
+      "dialog_node": "response_8_1567347999310",
+      "previous_sibling": "response_1_1567347998449"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347813396",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　tyamamot@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(山本　妙)",
+      "dialog_node": "response_6_1567347813396",
+      "previous_sibling": "response_10_1567347851173"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347967272",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　環境システム学科　tosono@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(大園　享司)",
+      "dialog_node": "response_2_1567347967272",
+      "previous_sibling": "response_7_1567347966266"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347343817",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電気工学科　kofujiwa@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(藤原　耕二)",
+      "dialog_node": "response_2_1567347343817",
+      "previous_sibling": "response_4_1567347340982"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347887904",
+      "output": {
+        "text": {
+          "values": [
+            "心理学部　moikawa@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(及川　昌典)",
+      "dialog_node": "response_2_1567347887904",
+      "previous_sibling": "response_3_1567347887073"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567347804932",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機械システム工学科　tanoguch@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(野口　尚史)",
+      "dialog_node": "response_7_1567347804932",
+      "previous_sibling": "response_4_1567347803395"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1567347940104",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医工学科　 tkenmots@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(剣持 貴弘)",
+      "dialog_node": "response_9_1567347940104",
+      "previous_sibling": "response_6_1567347938800"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567348012962",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　 ‎yuyoshid@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(吉田　優子)",
+      "dialog_node": "response_7_1567348012962",
+      "previous_sibling": "response_10_1567348011171"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_1_1567348021239",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機械システム工学科　hmiyamot@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(宮本　博之)",
+      "dialog_node": "response_1_1567348021239",
+      "previous_sibling": "response_8_1567348020231"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567347871609",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　‎0774-65-7173"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(郭　雲輝)",
+      "dialog_node": "response_10_1567347871609",
+      "previous_sibling": "response_9_1567347870525"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347854127",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:渡邉彰",
+      "dialog_node": "response_2_1567347854127",
+      "previous_sibling": "response_2_1567347889910"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1567347336016",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電気工学科　ybaba@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(馬場　吉弘)",
+      "dialog_node": "response_9_1567347336016",
+      "previous_sibling": "response_5_1567347334921"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567347316320",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　エネルギー機械工学科"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(平田　勝哉)",
+      "dialog_node": "response_3_1567347316320",
+      "previous_sibling": "response_5_1567347310434"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567347948012",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医工学科　0774-65-6508"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(奥村 直毅)",
+      "dialog_node": "response_5_1567347948012",
+      "previous_sibling": "response_2_1567347947107"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347907325",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:庄子博人",
+      "dialog_node": "response_6_1567347907325",
+      "previous_sibling": "response_6_1567347905632"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567348006763",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医生命システム学科　knishika＠mai.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(西川 喜代孝)",
+      "dialog_node": "response_10_1567348006763",
+      "previous_sibling": "response_8_1567348003964"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567347881451",
+      "output": {
+        "text": {
+          "values": [
+            "心理学部 mashirai@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(白井　真理子)",
+      "dialog_node": "response_4_1567347881451",
+      "previous_sibling": "response_2_1567347880687"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567347976271",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　化学システム創成工学科　ktsuchiy@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(土屋　活美)",
+      "dialog_node": "response_8_1567347976271",
+      "previous_sibling": "response_8_1567347975429"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1567347869370",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　NULL"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(GAVIN JOHN BROOKS)",
+      "dialog_node": "response_9_1567347869370",
+      "previous_sibling": "response_7_1567347867030"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567347931745",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医情報学科 shiwa@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(日和 悟)",
+      "dialog_node": "response_5_1567347931745",
+      "previous_sibling": "response_10_1567347930954"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567344917990",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　インテリジェント情報工学科　stsuchiy@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(土屋　誠司)",
+      "dialog_node": "response_8_1567344917990",
+      "previous_sibling": "node_3_1567362159165"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_1_1567347793221",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電気工学科　tkato@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(井上　馨)",
+      "dialog_node": "response_1_1567347793221",
+      "previous_sibling": "response_2_1567347792341"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567347923239",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医生命システム学科　thori@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(堀 哲也)",
+      "dialog_node": "response_4_1567347923239",
+      "previous_sibling": "response_2_1567347922285"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347883716",
+      "output": {
+        "text": {
+          "values": [
+            "心理学部　NULL"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(嶋　大樹)",
+      "dialog_node": "response_6_1567347883716",
+      "previous_sibling": "response_4_1567347881451"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347898098",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部　NULL"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:福岡義之",
+      "dialog_node": "response_2_1567347898098",
+      "previous_sibling": "response_6_1567347897274"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567347946325",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医工学科  0774-65-6408"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(田中 和人)",
+      "dialog_node": "response_3_1567347946325",
+      "previous_sibling": "response_2_1567347945451"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347928381",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医生命システム学科　yyonei@mail.doshisha.ac.jp\t"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(米井 嘉一)",
+      "dialog_node": "response_2_1567347928381",
+      "previous_sibling": "response_9_1567347927548"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347993223",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機能分子・生命化学科　minaba@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(稲葉　稔)",
+      "dialog_node": "response_6_1567347993223",
+      "previous_sibling": "response_9_1567347992187"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567348030784",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　インテリジェント情報工学科　mhashimo@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(橋本　雅文)",
+      "dialog_node": "response_4_1567348030784",
+      "previous_sibling": "response_4_1567348029494"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567348026003",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電子工学科　hdeguchi@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(出口　博之)",
+      "dialog_node": "response_2_1567348026003",
+      "previous_sibling": "response_5_1567348024074"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347987331",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機能分子・生命化学科　tdoi@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(土井　貴之)",
+      "dialog_node": "response_2_1567347987331",
+      "previous_sibling": "response_3_1567347985791"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567347930954",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医情報学科　ksadakan@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(貞包 浩一朗)",
+      "dialog_node": "response_10_1567347930954",
+      "previous_sibling": "response_6_1567347930069"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_1_1567347935945",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医情報学科　iakiyama@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(秋山 いわき)",
+      "dialog_node": "response_1_1567347935945",
+      "previous_sibling": "response_9_1567347935140"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_1_1567348015639",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医生命システム学科"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(齋藤 直人)",
+      "dialog_node": "response_1_1567348015639",
+      "previous_sibling": "response_2_1567348014514"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567347958183",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　数理システム学科　kmizoha@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(溝畑　潔)",
+      "dialog_node": "response_3_1567347958183",
+      "previous_sibling": "response_7_1567347956352"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567347795051",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電子工学科　\ttkasuya@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(粕谷　俊郎)",
+      "dialog_node": "response_3_1567347795051",
+      "previous_sibling": "response_1_1567347793221"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1567347935140",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医情報学科　mamatsus@mail.doshisha.ac.jp\t"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(松島 正知)",
+      "dialog_node": "response_9_1567347935140",
+      "previous_sibling": "response_4_1567347934358"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567347990178",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機能分子・生命化学科　mkodera@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(小寺　政人)",
+      "dialog_node": "response_7_1567347990178",
+      "previous_sibling": "response_10_1567347989208"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567347879799",
+      "output": {
+        "text": {
+          "values": [
+            "心理学部　ytakeshi@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(竹島　康博)",
+      "dialog_node": "response_10_1567347879799",
+      "previous_sibling": "response_5_1567347878842"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567347972745",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　化学システム創成工学科　dyamamot@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(山本　大吾)",
+      "dialog_node": "response_5_1567347972745",
+      "previous_sibling": "response_4_1567347971828"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567347895408",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部　NULL"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:松倉啓太",
+      "dialog_node": "response_10_1567347895408",
+      "previous_sibling": "response_7_1567347894629"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347309297",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機械システム工学科　ntsujiuc@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(辻内　伸好)",
+      "dialog_node": "response_6_1567347309297",
+      "previous_sibling": "response_4_1567347206762"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567347893691",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部　NULL"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:横山勝彦",
+      "dialog_node": "response_10_1567347893691",
+      "previous_sibling": "response_7_1567347892861"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567347943594",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医工学科 ymorita@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(森田 有亮)",
+      "dialog_node": "response_7_1567347943594",
+      "previous_sibling": "response_1_1567347942738"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1567347936839",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医情報学科"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(渡辺 好章)",
+      "dialog_node": "response_9_1567347936839",
+      "previous_sibling": "response_1_1567347935945"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567347914337",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:井澤鉄也",
+      "dialog_node": "response_3_1567347914337",
+      "previous_sibling": "response_1_1567347913507"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567348020231",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機械システム工学科　kinaoka@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(稲岡　恭二)",
+      "dialog_node": "response_8_1567348020231",
+      "previous_sibling": "response_4_1567348019361"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347945451",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医工学科 toito@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(伊藤 利明)",
+      "dialog_node": "response_2_1567347945451",
+      "previous_sibling": "response_3_1567347944490"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1567347339688",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電子工学科\thtoda@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(戸田　裕之)",
+      "dialog_node": "response_9_1567347339688",
+      "previous_sibling": "response_9_1567347336016"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567347968268",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　環境システム学科　htsutsum@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(堤　浩之)",
+      "dialog_node": "response_10_1567347968268",
+      "previous_sibling": "response_2_1567347967272"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567348014514",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:渡邊裕也",
+      "dialog_node": "response_2_1567348014514",
+      "previous_sibling": "response_5_1567348013718"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1567347959801",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　数理システム学科　\thimai@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(今井　仁司)",
+      "dialog_node": "response_9_1567347959801",
+      "previous_sibling": "response_1_1567347958976"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567347863655",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　NULL"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(須藤　潤)",
+      "dialog_node": "response_7_1567347863655",
+      "previous_sibling": "response_3_1567347862877"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347905632",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:高木俊",
+      "dialog_node": "response_6_1567347905632",
+      "previous_sibling": "response_4_1567347903407"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567347965369",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　環境システム学科　\t0774-65-6801"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(福間　浩司)",
+      "dialog_node": "response_8_1567347965369",
+      "previous_sibling": "response_2_1567347964331"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1567347937908",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医情報学科　yoe@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(大江 洋平)",
+      "dialog_node": "response_9_1567347937908",
+      "previous_sibling": "response_9_1567347936839"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567347859996",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　‎tteranis@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(寺西　隆弘)",
+      "dialog_node": "response_10_1567347859996",
+      "previous_sibling": "response_5_1567347865913"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567347878842",
+      "output": {
+        "text": {
+          "values": [
+            "心理学部　takehara＠mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(竹原　卓真)",
+      "dialog_node": "response_5_1567347878842",
+      "previous_sibling": "response_1_1567347877517"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567347884506",
+      "output": {
+        "text": {
+          "values": [
+            "心理学部　ssato@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(佐藤　豪)",
+      "dialog_node": "response_5_1567347884506",
+      "previous_sibling": "response_6_1567347883716"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567347213037",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電気工学科dkoyama@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(小山　大介)",
+      "dialog_node": "response_4_1567347213037",
+      "previous_sibling": "response_1_1567347211509"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567347851173",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　‎mminai@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(南井　正廣)",
+      "dialog_node": "response_10_1567347851173",
+      "previous_sibling": "response_3_1567347806242"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567348028345",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　インテリジェント情報工学科　jcheng@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(程 俊)",
+      "dialog_node": "response_2_1567348028345",
+      "previous_sibling": "response_4_1567352732239"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347922285",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医生命システム学科　nnoguchi@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(野口 範子)",
+      "dialog_node": "response_2_1567347922285",
+      "previous_sibling": "response_6_1567347921483"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347801895",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電子工学科　sibi@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(衣斐　信介)",
+      "dialog_node": "response_2_1567347801895",
+      "previous_sibling": "response_2_1567347800706"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_1_1567347877517",
+      "output": {
+        "text": {
+          "values": [
+            "心理学部　aytanaka@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(田中　あゆみ)",
+      "dialog_node": "response_1_1567347877517",
+      "previous_sibling": "response_2_1567347859167"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347947107",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医工学科 0774-65-6403"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(片山 傳生)",
+      "dialog_node": "response_2_1567347947107",
+      "previous_sibling": "response_3_1567347946325"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567347975429",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　化学システム創成工学科　ktsukago@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(塚越　一彦)",
+      "dialog_node": "response_8_1567347975429",
+      "previous_sibling": "response_6_1567347974557"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567348000153",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　エネルギー機械工学科　shhara@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(原　峻平)",
+      "dialog_node": "response_7_1567348000153",
+      "previous_sibling": "response_8_1567347999310"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347984852",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機能分子・生命化学科　hkitagis@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(北岸　宏亮)",
+      "dialog_node": "response_2_1567347984852",
+      "previous_sibling": "response_8_1567347983953"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567347898927",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部　NULL"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:二宮浩彰",
+      "dialog_node": "response_7_1567347898927",
+      "previous_sibling": "response_2_1567347898098"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567347856774",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　tsnakamu@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(中村　艶子)",
+      "dialog_node": "response_4_1567347856774",
+      "previous_sibling": "response_8_1567347855208"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567347917073",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医生命システム学科　sishiura@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(石浦 章一)",
+      "dialog_node": "response_8_1567347917073",
+      "previous_sibling": "response_5_1567347916224"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567347989208",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機能分子・生命化学科　tkoga@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(古賀　智之)",
+      "dialog_node": "response_10_1567347989208",
+      "previous_sibling": "response_5_1567347988245"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_1_1567347737942",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　情報システムデザイン学科　katakaha@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(高橋　和彦)",
+      "dialog_node": "response_1_1567347737942",
+      "previous_sibling": "response_3_1567347730976"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347868225",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　0774-65-7199"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(窪田　光男)",
+      "dialog_node": "response_6_1567347868225",
+      "previous_sibling": "response_7_1567347863655"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347918121",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医生命システム学科"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(祝迫 惠子)",
+      "dialog_node": "response_6_1567347918121",
+      "previous_sibling": "response_8_1567347917073"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347969139",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　環境システム学科　ahay@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(林田　明)",
+      "dialog_node": "response_6_1567347969139",
+      "previous_sibling": "response_10_1567347968268"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567347326264",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　エネルギー機械工学科　mtakaoka@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(高岡　正憲)",
+      "dialog_node": "response_5_1567347326264",
+      "previous_sibling": "response_4_1567347325218"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567347966266",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　環境システム学科　mmorimit@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(盛満　正嗣)",
+      "dialog_node": "response_7_1567347966266",
+      "previous_sibling": "response_8_1567347965369"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567347899873",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部　NULL"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:中村康雄",
+      "dialog_node": "response_3_1567347899873",
+      "previous_sibling": "response_7_1567347898927"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347921483",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医生命システム学科  yurano@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(浦野 泰臣)",
+      "dialog_node": "response_6_1567347921483",
+      "previous_sibling": "response_7_1567347920705"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567347858386",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　NULL"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(中田　賀之)",
+      "dialog_node": "response_7_1567347858386",
+      "previous_sibling": "response_2_1567347860788"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567347916224",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:新井彩",
+      "dialog_node": "response_5_1567347916224",
+      "previous_sibling": "response_3_1567347914337"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567347983136",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機能分子・生命化学科　konishi@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(大西　慶一郎)",
+      "dialog_node": "response_5_1567347983136",
+      "previous_sibling": "response_3_1567347982294"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567347908850",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:上林清孝",
+      "dialog_node": "response_8_1567347908850",
+      "previous_sibling": "response_5_1567347908022"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567347956352",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　数理システム学科　\t0774-65-6971"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(川口　周)",
+      "dialog_node": "response_7_1567347956352",
+      "previous_sibling": "response_5_1567347951065"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347320482",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電子工学科yusato@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(佐藤　祐喜)",
+      "dialog_node": "response_2_1567347320482",
+      "previous_sibling": "response_6_1567347313286"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567347308054",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電子工学科　syoshika@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(吉門　進三)",
+      "dialog_node": "response_8_1567347308054",
+      "previous_sibling": "response_1_1567347204641"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567347951065",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　数理システム学科"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(竹井　義次)",
+      "dialog_node": "response_5_1567347951065",
+      "previous_sibling": "response_4_1567347949832"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567348029494",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　インテリジェント情報工学科　hhaga@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(芳賀　博英)",
+      "dialog_node": "response_4_1567348029494",
+      "previous_sibling": "response_3_1567348025215"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567347887073",
+      "output": {
+        "text": {
+          "values": [
+            "心理学部　aoya@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(大屋　藍子)",
+      "dialog_node": "response_3_1567347887073",
+      "previous_sibling": "response_4_1567347886268"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567347901655",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部 "
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:竹田正樹",
+      "dialog_node": "response_8_1567347901655",
+      "previous_sibling": "response_1_1567352725364"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567348026853",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機械システム工学科　ematsumu@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(松村　恵理子)",
+      "dialog_node": "response_8_1567348026853",
+      "previous_sibling": "response_4_1567348030784"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567347894629",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部　NULL"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:栁田昌彦",
+      "dialog_node": "response_7_1567347894629",
+      "previous_sibling": "response_10_1567347893691"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567347206762",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機械システム工学科　msasada@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(笹田　昌弘)",
+      "dialog_node": "response_4_1567347206762",
+      "previous_sibling": "response_2_1567347320482"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567347963261",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　環境システム学科　syamane@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(山根　省三)",
+      "dialog_node": "response_8_1567347963261",
+      "previous_sibling": "response_5_1567347962347"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347925956",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医生命システム学科 tomiyasa@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(宮坂 知宏)",
+      "dialog_node": "response_6_1567347925956",
+      "previous_sibling": "response_8_1567347924943"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567347979080",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　化学システム創成工学科　ashioi@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(塩井　章久)",
+      "dialog_node": "response_3_1567347979080",
+      "previous_sibling": "response_1_1567347978028"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567347864812",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　0774-65-7175"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(鈴木　美紀子)",
+      "dialog_node": "response_8_1567347864812",
+      "previous_sibling": "response_6_1567347868225"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_1_1567347958976",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　数理システム学科　0774-65-7469"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(河野　明)",
+      "dialog_node": "response_1_1567347958976",
+      "previous_sibling": "response_3_1567347958183"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567347903407",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:髙倉久志",
+      "dialog_node": "response_4_1567347903407",
+      "previous_sibling": "response_8_1567347901655"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_1_1567347973631",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　化学システム創成工学科　miyoshid@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(吉田　幹生)",
+      "dialog_node": "response_1_1567347973631",
+      "previous_sibling": "response_5_1567347972745"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567347896449",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部　NULL"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:北條達也",
+      "dialog_node": "response_10_1567347896449",
+      "previous_sibling": "response_10_1567347895408"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567347865913",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　NULL"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(鈴木　伸子)",
+      "dialog_node": "response_5_1567347865913",
+      "previous_sibling": "response_8_1567347864812"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567348023192",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電気工学科　\tmmatsuka@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(松川　真美)",
+      "dialog_node": "response_2_1567348023192",
+      "previous_sibling": "response_2_1567348022154"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567347924943",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医生命システム学科　nkakuda@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(角田 伸人)",
+      "dialog_node": "response_8_1567347924943",
+      "previous_sibling": "response_9_1567347924147"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347974557",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　化学システム創成工学科　mahashim@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(橋本　雅彦)",
+      "dialog_node": "response_6_1567347974557",
+      "previous_sibling": "response_1_1567347973631"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567347855208",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　pneff@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(PETER NEFF)",
+      "dialog_node": "response_8_1567347855208",
+      "previous_sibling": "response_7_1567347855996"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567347334921",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　情報システムデザイン学科　mokubo@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(大久保　雅史)",
+      "dialog_node": "response_5_1567347334921",
+      "previous_sibling": "response_1_1567347332262"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567348025215",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電子工学科　wsasaki@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(佐々木　和可緒)",
+      "dialog_node": "response_3_1567348025215",
+      "previous_sibling": "response_2_1567348026003"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1567347870525",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　dkawahara@mail.doshisha.ac.jp\t"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(河原　大輔)",
+      "dialog_node": "response_9_1567347870525",
+      "previous_sibling": "response_9_1567347869370"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567345701142",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　インテリジェント情報工学科　mmiki@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(三木　光範)",
+      "dialog_node": "response_8_1567345701142",
+      "previous_sibling": "response_1_1567345699308"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567347982294",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　化学システム創成工学科　stakenak@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(竹中　壮)",
+      "dialog_node": "response_3_1567347982294",
+      "previous_sibling": "response_10_1567347981416"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347313286",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電子工学科mshinjo@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(新庄　雅斗)",
+      "dialog_node": "response_6_1567347313286",
+      "previous_sibling": "response_8_1567347308054"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347800706",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電気工学科　tkato@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(加藤　利次)",
+      "dialog_node": "response_2_1567347800706",
+      "previous_sibling": "response_10_1567347798526"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567347918962",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医生命システム学科 twaku@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(和久 剛)",
+      "dialog_node": "response_10_1567347918962",
+      "previous_sibling": "response_6_1567347918121"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567347803395",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機械システム工学科　thirogak@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(廣垣　俊樹)",
+      "dialog_node": "response_4_1567347803395",
+      "previous_sibling": "response_2_1567347801895"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567347977248",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　化学システム創成工学科　yshiraka@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(白川　善幸)",
+      "dialog_node": "response_10_1567347977248",
+      "previous_sibling": "response_8_1567347976271"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567347980182",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　化学システム創成工学科　ymori@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(森　康維)",
+      "dialog_node": "response_5_1567347980182",
+      "previous_sibling": "response_3_1567347979080"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347880687",
+      "output": {
+        "text": {
+          "values": [
+            "心理学部　hsugiwak@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(杉若　弘子)",
+      "dialog_node": "response_2_1567347880687",
+      "previous_sibling": "response_10_1567347879799"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567347919853",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医生命システム学科　akobayas@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(小林 聡)",
+      "dialog_node": "response_8_1567347919853",
+      "previous_sibling": "response_10_1567347918962"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_1_1567347913507",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:石井好二郎",
+      "dialog_node": "response_1_1567347913507",
+      "previous_sibling": "response_6_1567347912603"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_1_1567347978028",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　数理システム学科　\tssaito@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(齋藤　誠慈)",
+      "dialog_node": "response_1_1567347978028",
+      "previous_sibling": "response_10_1567347977248"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347941914",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医工学科  ryokogaw@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(横川 隆一)",
+      "dialog_node": "response_6_1567347941914",
+      "previous_sibling": "response_7_1567347940964"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567347908022",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:河西正博",
+      "dialog_node": "response_5_1567347908022",
+      "previous_sibling": "response_6_1567347907325"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567347971828",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　化学システム創成工学科　ttamura@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(田村　隆)",
+      "dialog_node": "response_4_1567347971828",
+      "previous_sibling": "response_2_1567347971015"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347891996",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部　NULL"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:鷲谷洋輔",
+      "dialog_node": "response_6_1567347891996",
+      "previous_sibling": "response_5_1567347890868"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567347796270",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　情報システムデザイン学科　\ttkoita@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(小板　隆浩)",
+      "dialog_node": "response_7_1567347796270",
+      "previous_sibling": "response_6_1567347797409"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567347900716",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部　NULL"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:田附俊一",
+      "dialog_node": "response_8_1567347900716",
+      "previous_sibling": "response_3_1567347899873"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347889910",
+      "output": {
+        "text": {
+          "values": [
+            "心理学部　ishinn@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(石川　信一)",
+      "dialog_node": "response_2_1567347889910",
+      "previous_sibling": "response_4_1567347888791"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347964331",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　環境システム学科　0774-65-7768"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(関　穣慶)",
+      "dialog_node": "response_2_1567347964331",
+      "previous_sibling": "response_8_1567347963261"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567347807570",
+      "output": {
+        "text": {
+          "values": [
+            "心理学部 myogo@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(余語　真夫)",
+      "dialog_node": "response_10_1567347807570",
+      "previous_sibling": "response_9_1567347809097"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567347885362",
+      "output": {
+        "text": {
+          "values": [
+            "心理学部　‎tkouyama@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(神山　貴弥)",
+      "dialog_node": "response_7_1567347885362",
+      "previous_sibling": "response_5_1567347884506"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567347810493",
+      "output": {
+        "text": {
+          "values": [
+            "心理学部　tamuto@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(武藤　崇)",
+      "dialog_node": "response_7_1567347810493",
+      "previous_sibling": "response_4_1567347876665"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567347892861",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部　NULL"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:若原卓",
+      "dialog_node": "response_7_1567347892861",
+      "previous_sibling": "response_6_1567347891996"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567347314550",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機械システム工学科"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(山口　博司)",
+      "dialog_node": "response_4_1567347314550",
+      "previous_sibling": "response_6_1567347309297"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_1_1567347942738",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医工学科"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(山本 浩司)",
+      "dialog_node": "response_1_1567347942738",
+      "previous_sibling": "response_6_1567347941914"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1567347992187",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機能分子・生命化学科　makato@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(加藤　将樹)",
+      "dialog_node": "response_9_1567347992187",
+      "previous_sibling": "response_3_1567347991386"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347853137",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　‎kmatsuki@mail.doshisha.ac.jp　"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(松木　啓子)",
+      "dialog_node": "response_2_1567347853137",
+      "previous_sibling": "response_6_1567347813396"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_1_1567347204641",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電気工学科　mwada@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(和田　元)",
+      "dialog_node": "response_1_1567347204641",
+      "previous_sibling": "response_4_1567347213037"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347971015",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　化学システム創成工学科　ytahara@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(田原　義朗)",
+      "dialog_node": "response_2_1567347971015",
+      "previous_sibling": "response_2_1567347970040"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567347867030",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　jgoujon@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(JONATHAN GOUJON)",
+      "dialog_node": "response_7_1567347867030",
+      "previous_sibling": "response_5_1567347857561"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567347799522",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　情報システムデザイン学科　ttsuchiy@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(土屋　隆生)",
+      "dialog_node": "response_5_1567347799522",
+      "previous_sibling": "response_7_1567347796270"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567347888791",
+      "output": {
+        "text": {
+          "values": [
+            "心理学部　iuchiyama@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(内山　伊知郎)",
+      "dialog_node": "response_4_1567347888791",
+      "previous_sibling": "response_2_1567347887904"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567348013718",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　数理システム学科　yowatana@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(渡邊　芳英)",
+      "dialog_node": "response_5_1567348013718",
+      "previous_sibling": "response_7_1567348012962"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347797409",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電子工学科　hisaiwai@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(岩井　誠人)",
+      "dialog_node": "response_6_1567347797409",
+      "previous_sibling": "response_3_1567347795051"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567348005773",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　‎bgildenh@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(BETTINA GILDENHARD)",
+      "dialog_node": "response_7_1567348005773",
+      "previous_sibling": "response_2_1567348001884"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567347806242",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機械システム工学科　hsakamot@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(坂本　英俊)",
+      "dialog_node": "response_3_1567347806242",
+      "previous_sibling": "response_7_1567347804932"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567347983953",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機能分子・生命化学科　0774-65-6644"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(松本　孝広)",
+      "dialog_node": "response_8_1567347983953",
+      "previous_sibling": "response_5_1567347983136"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567347873918",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　NULL"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(内田　尚孝)",
+      "dialog_node": "response_3_1567347873918",
+      "previous_sibling": "response_10_1567347807570"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567347321562",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機械システム工学科　kiobunai@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(小武内　清貴)",
+      "dialog_node": "response_4_1567347321562",
+      "previous_sibling": "response_4_1567347314550"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567347932526",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医情報学科　tomo@is.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(廣安 知之)",
+      "dialog_node": "response_10_1567347932526",
+      "previous_sibling": "response_5_1567347931745"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567347929206",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医生命システム学科　hichikaw@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(市川 寛)",
+      "dialog_node": "response_3_1567347929206",
+      "previous_sibling": "response_2_1567347928381"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567347310434",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　情報システムデザイン学科　seyamamo@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(山本　誠一)",
+      "dialog_node": "response_5_1567347310434",
+      "previous_sibling": "response_4_1567347321562"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567347875880",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　NULL"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(WILMER CAMERON ROMNEY)",
+      "dialog_node": "response_7_1567347875880",
+      "previous_sibling": "response_3_1567347873918"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567347960597",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　環境システム学科　mohasega@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(長谷川　元洋)",
+      "dialog_node": "response_8_1567347960597",
+      "previous_sibling": "response_9_1567347959801"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567347730976",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　情報システムデザイン学科　kshimoha@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(下原　勝憲)",
+      "dialog_node": "response_3_1567347730976",
+      "previous_sibling": "response_9_1567347721608"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567347798526",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機械システム工学科"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(松岡　敬)",
+      "dialog_node": "response_10_1567347798526",
+      "previous_sibling": "response_5_1567347799522"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567347991386",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機能分子・生命化学科　yokimura@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(木村　佳文)",
+      "dialog_node": "response_3_1567347991386",
+      "previous_sibling": "response_7_1567347990178"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_1_1567347211509",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　インテリジェント情報工学科　emakihar@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(槇原　絵里奈)",
+      "dialog_node": "response_1_1567347211509",
+      "previous_sibling": "response_8_1567345701142"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347897274",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部　NULL"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:藤澤義彦",
+      "dialog_node": "response_6_1567347897274",
+      "previous_sibling": "response_10_1567347896449"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567347985791",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機能分子・生命化学科　taendo@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(遠藤　太佳嗣)",
+      "dialog_node": "response_3_1567347985791",
+      "previous_sibling": "response_2_1567347984852"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_1_1567345699308",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　インテリジェント情報工学科　tomkimur@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(木村　共孝)",
+      "dialog_node": "response_1_1567345699308",
+      "previous_sibling": "response_8_1567345304600"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1567347924147",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医生命システム学科　mikegawa@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(池川 雅哉)",
+      "dialog_node": "response_9_1567347924147",
+      "previous_sibling": "response_4_1567347923239"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567347962347",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　環境システム学科　sakao@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(赤尾　聡史)",
+      "dialog_node": "response_5_1567347962347",
+      "previous_sibling": "response_9_1567347961531"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_1_1567347312087",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電気工学科　yatakaha@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(高橋　康人)",
+      "dialog_node": "response_1_1567347312087",
+      "previous_sibling": "response_3_1567347316320"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567347911772",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部 ‎rwakita@mail.doshisha.ac.jp\t"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(脇田　里子)",
+      "dialog_node": "response_10_1567347911772",
+      "previous_sibling": "response_2_1567347910945"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567347325218",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　エネルギー機械工学科　eaoyama@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(青山　栄一)",
+      "dialog_node": "response_4_1567347325218",
+      "previous_sibling": "response_7_1567347322733"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347938800",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医情報学科　tota@mail.doshisha.ac.jp\t"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(太田 哲男)",
+      "dialog_node": "response_6_1567347938800",
+      "previous_sibling": "response_9_1567347937908"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567348019361",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電気工学科　nnagaoka@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(長岡　直人)",
+      "dialog_node": "response_4_1567348019361",
+      "previous_sibling": "response_9_1567348018516"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_1_1567347332262",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　情報システムデザイン学科　skatagir@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(大崎　美穂)",
+      "dialog_node": "response_1_1567347332262",
+      "previous_sibling": "response_6_1567347331101"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567347857561",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　hnakanis@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(中西　裕樹)",
+      "dialog_node": "response_5_1567347857561",
+      "previous_sibling": "response_4_1567347856774"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567347934358",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医情報学科　shiryu@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(飛龍 志津子)",
+      "dialog_node": "response_4_1567347934358",
+      "previous_sibling": "response_2_1567347933484"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567348022154",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　エネルギー機械工学科　\tkokubo@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(大窪　和也)",
+      "dialog_node": "response_2_1567348022154",
+      "previous_sibling": "response_1_1567348021239"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567347886268",
+      "output": {
+        "text": {
+          "values": [
+            "心理学部 mokitsu@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(興津　真理子)",
+      "dialog_node": "response_4_1567347886268",
+      "previous_sibling": "response_7_1567347885362"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347860788",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　NULL"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(玉井　史絵)",
+      "dialog_node": "response_2_1567347860788",
+      "previous_sibling": "response_10_1567347859996"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347910945",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:海老根直之",
+      "dialog_node": "response_2_1567347910945",
+      "previous_sibling": "response_9_1567347909725"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567348001096",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　エネルギー機械工学科　myuasa@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(湯浅　元仁)",
+      "dialog_node": "response_10_1567348001096",
+      "previous_sibling": "response_7_1567348000153"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1567347329061",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　情報システムデザイン学科　skatagir@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(片桐　滋)",
+      "dialog_node": "response_9_1567347329061",
+      "previous_sibling": "response_5_1567347326264"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567347345013",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　情報システムデザイン学科　ksato@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(佐藤　健哉)",
+      "dialog_node": "response_7_1567347345013",
+      "previous_sibling": "response_2_1567347343817"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567347322733",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　エネルギー機械工学科　jsenda@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(千田　二郎)",
+      "dialog_node": "response_7_1567347322733",
+      "previous_sibling": "response_1_1567347312087"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347912603",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:石倉忠夫",
+      "dialog_node": "response_6_1567347912603",
+      "previous_sibling": "response_10_1567347911772"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_1_1567352725364",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　インテリジェント情報工学科　skaneda@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(金田　重郎)",
+      "dialog_node": "response_1_1567352725364",
+      "previous_sibling": "response_8_1567347900716"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_1_1567347998449",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機能分子・生命化学科　khirota@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(廣田　健)",
+      "dialog_node": "response_1_1567347998449",
+      "previous_sibling": "response_10_1567347994543"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567347948815",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医工学科　‎nkoizumi@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(小泉 範子)",
+      "dialog_node": "response_2_1567347948815",
+      "previous_sibling": "response_5_1567347948012"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567347855996",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　yhasebe@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(長谷部　陽一郎)",
+      "dialog_node": "response_7_1567347855996",
+      "previous_sibling": "response_2_1567347853137"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347930069",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医生命システム学科　mitakaha@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(高橋 美帆)",
+      "dialog_node": "response_6_1567347930069",
+      "previous_sibling": "response_3_1567347929206"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1567348024074",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電気工学科　masuzuki@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(鈴木　将之)",
+      "dialog_node": "response_5_1567348024074",
+      "previous_sibling": "response_2_1567348023192"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1567347909725",
+      "output": {
+        "text": {
+          "values": [
+            "スポーツ健康科学部"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:加藤久詞",
+      "dialog_node": "response_9_1567347909725",
+      "previous_sibling": "response_8_1567347908850"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567352732239",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　インテリジェント情報工学科  tsukato@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(加藤　恒夫)",
+      "dialog_node": "response_4_1567352732239",
+      "previous_sibling": "response_10_1567348006763"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567347862877",
+      "output": {
+        "text": {
+          "values": [
+            "グローバル・コミュニケーション学部　mutakeda@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(竹田　宗継)",
+      "dialog_node": "response_3_1567347862877",
+      "previous_sibling": "response_7_1567347810493"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1567348001884",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　エネルギー機械工学科　\t0774-65-6230"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(伊藤　彰人)",
+      "dialog_node": "response_2_1567348001884",
+      "previous_sibling": "response_10_1567348001096"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567348011171",
+      "output": {
+        "text": {
+          "values": [
+            "心理学部 nakayachi@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(中谷内　一也)",
+      "dialog_node": "response_10_1567348011171",
+      "previous_sibling": "response_2_1567348028345"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1567347809097",
+      "output": {
+        "text": {
+          "values": [
+            "心理学部　mmori@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(毛利　真弓)",
+      "dialog_node": "response_9_1567347809097",
+      "previous_sibling": "response_3_1567347811943"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567347811943",
+      "output": {
+        "text": {
+          "values": [
+            "心理学部 thata@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(畑　敏道)",
+      "dialog_node": "response_3_1567347811943",
+      "previous_sibling": "response_3_1567347872672"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1567347961531",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　環境システム学科　yyokoo@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(横尾　頼子)",
+      "dialog_node": "response_9_1567347961531",
+      "previous_sibling": "response_8_1567347960597"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1567347944490",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医工学科 enakamac@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(仲町 英治)",
+      "dialog_node": "response_3_1567347944490",
+      "previous_sibling": "response_7_1567347943594"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1567347331101",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電子工学科mtsuji@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(辻　幹男)",
+      "dialog_node": "response_6_1567347331101",
+      "previous_sibling": "response_9_1567347329061"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1567348003964",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機械システム工学科　hsakamot@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(坂本　英俊)",
+      "dialog_node": "response_8_1567348003964",
+      "previous_sibling": "response_3_1567348002800"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1567347340982",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機械システム工学科　htakuwa@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(多久和　英樹)",
+      "dialog_node": "response_4_1567347340982",
+      "previous_sibling": "response_9_1567347339688"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1567348018516",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　電気工学科　kokondo@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(近藤　弘一)",
+      "dialog_node": "response_9_1567348018516",
+      "previous_sibling": "response_1_1567348015639"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1567347920705",
+      "output": {
+        "text": {
+          "values": [
+            "生命医科学部　医生命システム学科　 ymita@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(三田　雄一郎)",
+      "dialog_node": "response_7_1567347920705",
+      "previous_sibling": "response_8_1567347919853"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1567347994543",
+      "output": {
+        "text": {
+          "values": [
+            "理工学部　機能分子・生命化学科　yhitomi@mail.doshisha.ac.jp"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1567344109712",
+      "conditions": "@教授名:(人見　穣)",
+      "dialog_node": "response_10_1567347994543",
+      "previous_sibling": "response_6_1567347993223"
+    },
+    {
+      "type": "standard",
+      "title": "終了ノード",
+      "parent": "node_9_1567344109712",
+      "dialog_node": "node_3_1567362159165"
+    },
+    {
+      "type": "standard",
+      "title": "学科ないやつ（の結果出力ノード）",
+      "parent": "node_8_1568453490755",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@京田辺_学部内に学科が存在しないもの",
+      "dialog_node": "node_5_1568453660567",
+      "previous_sibling": "node_5_1568453658569"
+    },
+    {
+      "type": "standard",
+      "title": "学科があるやつ",
+      "parent": "node_8_1568453490755",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@京田辺_学部内に学科が存在するもの",
+      "dialog_node": "node_5_1568453658569"
+    },
+    {
+      "type": "standard",
+      "title": "今出川ノード",
+      "parent": "node_3_1567318468290",
+      "conditions": "@キャンパス:今出川",
+      "dialog_node": "node_10_1567362066857",
+      "previous_sibling": "node_3_1567319616206"
+    },
+    {
+      "type": "standard",
+      "title": "京田辺ノード",
+      "output": {
+        "text": {
+          "values": [
+            "京田辺ですね．次に，知りたい教授の名前を入力してください（フルネームの場合，姓と名の間にスペースを開けないでください）",
+            ""
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1567318468290",
+      "context": {},
+      "conditions": "@キャンパス:京田辺",
+      "dialog_node": "node_3_1567319616206"
+    },
+    {
+      "type": "standard",
+      "title": "結果出力ノード",
+      "parent": "node_5_1568453658569",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@系 ||   @学科:医生命システム学科 ||  @学科:医情報学科 || @学科:医工学科",
+      "dialog_node": "node_3_1568464878980",
+      "previous_sibling": "response_9_1568473192542"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1568473192542",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "次に学科を選択してください"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "学科一覧",
+            "options": [
+              {
+                "label": "医工学科",
+                "value": {
+                  "input": {
+                    "text": "医工学科"
+                  }
+                }
+              },
+              {
+                "label": "医情報学科",
+                "value": {
+                  "input": {
+                    "text": "医情報学科"
+                  }
+                }
+              },
+              {
+                "label": "医生命システム学科",
+                "value": {
+                  "input": {
+                    "text": "医生命システム学科"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_5_1568453658569",
+      "conditions": "@京田辺_学部内に学科が存在するもの:生命医科学部",
+      "dialog_node": "response_9_1568473192542",
+      "previous_sibling": "response_4_1568473190825"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1568473190825",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "次に系を選択してください"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "系の一覧",
+            "options": [
+              {
+                "label": "情報系",
+                "value": {
+                  "input": {
+                    "text": "情報系"
+                  }
+                }
+              },
+              {
+                "label": "電気系",
+                "value": {
+                  "input": {
+                    "text": "電気系"
+                  }
+                }
+              },
+              {
+                "label": "機械系",
+                "value": {
+                  "input": {
+                    "text": "機械系"
+                  }
+                }
+              },
+              {
+                "label": "化学系",
+                "value": {
+                  "input": {
+                    "text": "化学系"
+                  }
+                }
+              },
+              {
+                "label": "環境系",
+                "value": {
+                  "input": {
+                    "text": "環境系"
+                  }
+                }
+              },
+              {
+                "label": "数理系",
+                "value": {
+                  "input": {
+                    "text": "数理系"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_5_1568453658569",
+      "conditions": "@京田辺_学部内に学科が存在するもの:理工学部",
+      "dialog_node": "response_4_1568473190825"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_5_1568465528601",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1568464878980",
+      "dialog_node": "response_5_1568465528601",
+      "previous_sibling": "response_4_1568465527294"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1568465531730",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1568464878980",
+      "dialog_node": "response_9_1568465531730",
+      "previous_sibling": "response_9_1568465530348"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1568465481885",
+      "output": {
+        "text": {
+          "values": [
+            "数理系\n1.代数学研究室\n\b川口周\n2.幾何学研究室\n\b河野明:HS-208\n3.関数方程式研究室\n\b溝端潔:SC-606\n4.統計ファイナンス研究室\n\b津田博史:HS-206\n5.計算数理研究室\n\b今井仁司\n6.情報解析研究室\n\b齋藤誠慈:HS-207\n7.離散数理研究室\n\b渡邊芳英:YE-218\n8.解析学研究室\n\b竹井義次:HS-310\n"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1568464878980",
+      "conditions": "@系:数理系",
+      "dialog_node": "response_3_1568465481885",
+      "previous_sibling": "response_3_1568465478653"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_2_1568465451331",
+      "output": {
+        "text": {
+          "values": [
+            "電気系\n1.光・電子回路システム研究室\n\b佐々木和可緒:YE-414/戸田裕之:YE-416\n\bhttp://optelec.doshisha.ac.jp\n2.電気電子材料研究室\n\b吉門進三:YE-318/佐藤祐喜:YE-118\n3.電気回路研究室\n\b加藤利次:YE-312/井上馨:YE-216\n\bhttp://kairo.doshisha.ac.jp/\n4.電力系統解析研究室\n\b長岡直人:YE-314/馬場吉弘:YE-412\n5.超高周波工学研究室\n\b辻幹男:YE-418/出口博之:YE-417\n\bhttp://www1.doshisha.ac.jp/~hdeguchi/index.html\n6.電気機器研究室\n\b藤原浩志:YE-316/YE-317\n7.超音波エレクトロニクス・応用計測研究室\n\b松川真美:YE-217/小山大介:YE-116\n\bhttp://use.doshisha.ac.jp/Welcome2.html\n8.プラズマ物理研究室\n\b和田元:YE-311/粕谷俊郎:YE-419\n9.応用数学研究室\n\b新庄雅斗:YE-219/近藤弘一:YE-211\n10.通信方式研究室\n\b岩井誠人:YE-117/衣斐信介:YE-415\n\bhttp://cslab.doshisha.ac.jp/\n11.光デバイス研究室\n\b大谷直毅:YE-119"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1568464878980",
+      "conditions": "@系:電気系",
+      "dialog_node": "response_2_1568465451331",
+      "previous_sibling": "response_9_1568464987853"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1568465475554",
+      "output": {
+        "text": {
+          "values": [
+            "機械系\n1.金属材料科学研究室\n\b宮本博之:Y-125/湯浅基仁:YM-122\n\bhttp://www.metal.doshisha.ac.jp/newfolder1/eindex.html\n2.応用材料工学研究室\n\b笹田昌弘:YM-324/田中達也:YM-325\n.構造工学研究室\n\b小武内清貴:YM-223/大窪和也:YM-224\n\bhttp://amsel.doshisha.ac.jp/\n4.噴霧・燃焼工学研究室\n\b千田二郎:KK-301/松村恵理子:YM-326\n\bhttp://comb.doshisha.ac.jp/\n5.伝熱工学研究室\n\b稲岡恭二:YM-426/原峻平:YM-323\n6.流体力学研究室\n\b平田勝哉:YM-321/野口尚史:YM-322\n7.機械力学研究室\n\b辻内伸好:YM-423/伊藤彰人:YM-421\n\bhttp://moavic.main.jp/\n8.生産システムデザイン研究室\n\b青山栄一:YM-521/廣垣俊樹:YM-503\n\bhttp://www1.doshisha.ac.jp/~eaoyama/\n9.機械要素・トライボロジー研究室\n\b松岡敬:YM-226/坂本英俊:YM-121\n\b10.数理工学研究室\n\bhttp://www1.doshisha.ac.jp/~tribolab/\n11.物理学研究室（高岡研究室）\n\b高岡正憲:YM-504\n12.物理学研究室（山口研究室）\n\b山口博司:KK-317\n\bhttp://www1.doshisha.ac.jp/~hyamaguc/"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1568464878980",
+      "conditions": "@系:機械系",
+      "dialog_node": "response_3_1568465475554",
+      "previous_sibling": "response_2_1568465451331"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1568465522341",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1568464878980",
+      "conditions": "@学科:医情報学科",
+      "dialog_node": "response_4_1568465522341",
+      "previous_sibling": "response_3_1568465481885"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1568465530348",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1568464878980",
+      "dialog_node": "response_9_1568465530348",
+      "previous_sibling": "response_5_1568465528601"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_4_1568465527294",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1568464878980",
+      "dialog_node": "response_4_1568465527294",
+      "previous_sibling": "response_3_1568465525550"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1568465525550",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1568464878980",
+      "conditions": "@学科:医生命システム学科",
+      "dialog_node": "response_3_1568465525550",
+      "previous_sibling": "response_10_1568465524182"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1568465478653",
+      "output": {
+        "text": {
+          "values": [
+            "環境系\n1.地球システム科学研究室\n\b林田明:HS-110/福間浩司:KE-309\n2.環境保全・防災科学研究室\n\b\n3.生命環境保全研究室\n\b大園享司:KE-310/長谷川元洋:KE-411\n\bhttp://www1.doshisha.ac.jp/=tosono/\n4.人間環境研究室\n\b赤尾聡史:KE-311\n5.新エネルギーシステム研究室\n\b後藤琢也:KE-408\n6.環境システム工学研究室\n\b盛満正嗣:KE-409\n7.地域環境研究室\n\b山根省三:KE-410\n8.環境科学\n\b関穣慶:HS-106"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1568464878980",
+      "conditions": "@系:環境系",
+      "dialog_node": "response_3_1568465478653",
+      "previous_sibling": "response_7_1568465477027"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1568465477027",
+      "output": {
+        "text": {
+          "values": [
+            "化学系\n1.電気化学研究室\n稲葉稔:SC-321/土居貴之:SC-322\n2.高分子化学研究室\n\b東信行:SC-422/古賀智之:SC-421\n\bhttp://www1.doshisha.ac.jp/~polychem/index.html\n3.無機合成化学研究室\n\b廣田健:SC-208/加藤将樹:SC-207\n\bhttp://www1.doshisha.ac.jp/~makato/\n4.機能有機化学研究室\n\b北岸宏亮:SC-423\n\bhttp://www1.doshisha.ac.jp/~kkano/\n5.物理化学研究室\n\b木村佳文:SC-221/遠藤太佳嗣:SC-222\n\bhttp://www1.doshisha.ac.jp/~bukka/index.html\n6.生体機能科学研究室\n\b水谷義:SC-522\n\bhttp://www1.doshisha.ac.jp/~biofunct/\n7.分子生命化学研究室\n\b小寺政人:SC-323/人見穣:SC-308\n\bhttp://www1.doshisha.ac.jp/~mkodera1/index.html\n8.粉体工学研究室\n\b白川善幸:SC-326/吉田幹生:SC-408\n\bhttp://powder.doshisha.ac.jp/\n9.移動現象研究室\n\b森康維:SC-426/土屋活美:SC-425\n10.材料システム研究室\n\b竹中壮:SC-223\n11.生物化学工学研究室\n\b松本道明:SC-525/田原義朗:SC-526\n12.計測分離工学研究室\n\b塚越一彦:SC-325/田村隆*SC-327\n13.分子化学工学研究室\n\b塩井章久:SC-226/山本大吾:SC-224\n\bhttp://www1.doshisha.ac.jp/~molcheng/\n14バイオセンシング研究室\n\b橋本雅彦:SC-324\n"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1568464878980",
+      "conditions": "@系:化学系",
+      "dialog_node": "response_7_1568465477027",
+      "previous_sibling": "response_3_1568465475554"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1568465524182",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1568464878980",
+      "conditions": "@学科:医工学科",
+      "dialog_node": "response_10_1568465524182",
+      "previous_sibling": "response_4_1568465522341"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1568464987853",
+      "output": {
+        "text": {
+          "values": [
+            "情報系\n1.情報数理工学研究室\n\b程俊:YE-215/木村共孝:YE-214\n    \bhttp://italab.doshisha.ac.jp/\n2.情報システム学研究室\n\b金田重郎:KC-316/芳賀博英:KC-318\n   \bhttp://ishss10.doshisha.ac.jp/\n3.知識情報処理研究室\n\b渡部広一:KC-211/土屋誠司:KC-213\n    \bhttp://indy.doshisha.ac.jp/\n4.知的機構究室\n    \b桂井麻里衣:KE-210\n    \bhttp://mm.doshisha.ac.jp/\n5.知的システムデザイン研究室\n\b三木光範:KC-211\n    \bhttp://mikilab.doshisha.ac.jp/\n6.知能メカトロ情報システム研究室\n\b橋本雅文:KE-208/高橋和彦:KE-209\n7.音声言語処理機構研究室\n\b山本誠一:KC-211/加藤恒夫:KC-321  \n8.社会情報学研究室\n\b下原勝憲:KC-222/イヴァンタネヴ:KC-223\n9.共創情報学研究室\n\b片桐　滋:KE-112/大崎　美穂:KE-111\n10.応用メディア情報研究室\n\b大久保雅史:KE-211/土屋隆生:KC-323\n11.ネットワーク情報システム研究室\n\b佐藤健哉:KE-108/小板隆浩:KE-109\n\bhttp://w3.doshisha.ac.jp/"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1568464878980",
+      "conditions": "@系:情報系",
+      "dialog_node": "response_9_1568464987853"
+    },
+    {
+      "type": "standard",
+      "title": "該当教授がいない場合",
+      "output": {
+        "text": {
+          "values": [
+            "該当する教授はいませんでした．"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1567319616206",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_3_1567319616206"
+      },
+      "dialog_node": "node_6_1567344827498",
+      "previous_sibling": "node_9_1567344109712"
+    },
+    {
+      "type": "standard",
+      "title": "結果出力ノード",
+      "parent": "node_3_1567319616206",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@教授名",
+      "dialog_node": "node_9_1567344109712",
+      "previous_sibling": "node_9_1567342547829"
+    },
+    {
+      "type": "standard",
+      "title": "同姓がいた場合ノード",
+      "output": {
+        "text": {
+          "values": [
+            "同性の人が複数存在します．フルネームで入力してください"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1567319616206",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_3_1567319616206"
+      },
+      "conditions": "@同姓 && @教授名",
+      "dialog_node": "node_9_1567342547829"
+    },
+    {
+      "type": "standard",
+      "title": "京田辺ノード",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "京田辺ですね．次に学部を選択してください．"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "理工学部",
+                "value": {
+                  "input": {
+                    "text": "理工学部"
+                  }
+                }
+              },
+              {
+                "label": "文化情報学部",
+                "value": {
+                  "input": {
+                    "text": "文化情報学部"
+                  }
+                }
+              },
+              {
+                "label": "生命医科学部",
+                "value": {
+                  "input": {
+                    "text": "生命医科学部"
+                  }
+                }
+              },
+              {
+                "label": "スポーツ健康科学部",
+                "value": {
+                  "input": {
+                    "text": "スポーツ健康科学部"
+                  }
+                }
+              },
+              {
+                "label": "心理学部",
+                "value": {
+                  "input": {
+                    "text": "心理学部"
+                  }
+                }
+              },
+              {
+                "label": "グローバル・コミュニケーション学部",
+                "value": {
+                  "input": {
+                    "text": "グローバル・コミュニケーション学部"
+                  }
+                }
+              }
+            ],
+            "description": "学部一覧",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_5_1567361378387",
+      "conditions": "@キャンパス",
+      "dialog_node": "node_8_1568453490755"
+    },
+    {
+      "type": "standard",
+      "title": "研究室ルート：ROOT",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "関連するキャンパスは今出川，京田辺のどちらですか"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "今出川",
+                "value": {
+                  "input": {
+                    "text": "今出川"
+                  }
+                }
+              },
+              {
+                "label": "京田辺",
+                "value": {
+                  "input": {
+                    "text": "京田辺"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "#研究室",
+      "dialog_node": "node_5_1567361378387",
+      "previous_sibling": "node_3_1567318468290"
+    },
+    {
+      "type": "standard",
+      "title": "その他：ROOT",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_8_1567361704924",
+      "previous_sibling": "node_5_1567361378387"
+    },
+    {
+      "type": "standard",
+      "title": "教授ノード：ROOT",
+      "output": {
+        "text": {
+          "values": [
+            "関連するキャンパスは京田辺，今出川のどちらですか？"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "context": {},
+      "conditions": "#教授の情報を求める",
+      "dialog_node": "node_3_1567318468290",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "挨拶ノード",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "こんにちは．知りたいことはなんすか？以下の中から選んでください"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "教授の情報",
+                "value": {
+                  "input": {
+                    "text": "教授について知りたい"
+                  }
+                }
+              },
+              {
+                "label": "研究室",
+                "value": {
+                  "input": {
+                    "text": "研究室について知りたい"
+                  }
+                }
+              },
+              {
+                "label": "その他",
+                "value": {
+                  "input": {
+                    "text": "その他"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "workspace_id": "63d19c15-696b-4e80-ae6d-fce0fefe46aa",
+  "counterexamples": [],
+  "system_settings": {
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}
