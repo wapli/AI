@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script src="popup.js"></script>
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div class="app">
+            <button type="button" onclick="openChat();">AIチャットボットを起動する</button>
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script>
+            function openChat(){
+                let url = 'http://waplichatbot.starfree.jp/wp/';
+                cordova.InAppBrowser.open(url, '_blank', 'location=no');
+            };
+        </script>
+    </body>
+</html>
