@@ -8,13 +8,8 @@ var BOTUI = BOTUI || {};
 BOTUI.botui = new BotUI("bot_app");
 BOTUI.url = 'https://api.github.com/search/repositories?q=';
 BOTUI.key = 0;
-
 // ====================================
 //　関数定義
-// ====================================
-
-// ====================================
-// 関数定義
 // ====================================
 BOTUI.init = function () {
     BOTUI.botui.message.bot({
