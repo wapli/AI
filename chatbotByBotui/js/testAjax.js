@@ -37,19 +37,6 @@ BOTUI.select = function () {
     });
 }
 
-// BOTUI.info_class_cancel = function () {
-//     BOTUI.botui.message.bot({
-//         //サーバー班が行っているスクレイピングで取得した情報を動的に表示．
-//         type: "text",
-//         content: "解析学Ⅰ　SS　病気\n\n\
-//         線形代数学Ⅰ　SS　病気\n\n\
-//         "
-//     })
-//     .then(function () {
-//         BOTUI.input();
-//     });
-// }
-
 BOTUI.input = function(){
     BOTUI.botui.message.bot({
         delay:1500,
@@ -65,12 +52,6 @@ BOTUI.input = function(){
     }).then(function(res){
         var tmp = res.value;
         BOTUI.getRep(tmp);
-        // BOTUI.botui.message.bot({
-        //     //サーバー班が行っているスクレイピングで取得した情報を動的に表示．
-        //     type: "text",
-        //     content: res.value   
-        // }).then(function(){
-        // });
     });
 }
 
@@ -85,12 +66,10 @@ BOTUI.getRep = function(keyword){
         BOTUI.showResult(result.total_count, keyword);
     }
     xhr.send();
-    //1235462
 }
 
 BOTUI.showResult = function(res, key){
     BOTUI.botui.message.bot({
-        //サーバー班が行っているスクレイピングで取得した情報を動的に表示．
         type: "text",
         content: key+"に関するレポジトリは"+res+"個Githubに存在します"
     }).then(function(){
