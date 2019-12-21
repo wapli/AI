@@ -9,7 +9,16 @@ var BOTUI = BOTUI ||  {};
 BOTUI.botui = new BotUI("bot_app");
 var url = 'https://api.github.com/search/repositories?q=';
 var msgIndex, key;
-
+/////////////DB用の変数/////////////////
+var mysql = require('mysql');
+var client = mysql.createClient({
+ 
+    host: '',
+    user: '',
+    password: '',
+    database: ''
+ 
+})
 // ====================================
 // 関数定義
 // ====================================

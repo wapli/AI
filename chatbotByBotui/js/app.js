@@ -24,15 +24,93 @@ BOTUI.init = function () {
 BOTUI.select = function () {
     BOTUI.botui.action.button({
         delay: 300,
-        action: [{ icon: "search", text: "レポジトリ数の検索", value: "レポジトリの数をおしえて！" }],
+        action: [{icon: "search", text: "休講情報", value: "休講情報をおしえて！"},
+                { icon: "search", text: "シラバス", value: "シラバスを検索したい！" },
+                { icon: "search", text: "館名の略記から建物名を調べる", value: "略記が表す建物を知りたい！" },
+                //{ icon: "search", text: "", value: "シラバス" },wi-fi, チャージ場所等
+                { icon: "search", text: "レポジトリ数の検索", value: "レポジトリの数をおしえて！" }
+                ],
         addMessage: true //true→入力として画面に表示する
     })
     .then(function (res) {
-        BOTUI.input();
+        //BOTUI.input();
+        if(res.value === "休講情報をおしえて！"){
+            BOTUI.info_class_cancel();
+        }
+        else if(res.value === "シラバスを検索したい！"){
+            BOTUI.syillabus();
+        }
+        else if(res.value === "略記が表す建物を知りたい！"){
+            BOTUI.buildingName();
+        }
+        else if(res.value === "レポジトリの数を教えて！"){
+            BOTUI.inputRep();
+        }
     });
 }
 
-BOTUI.input = function(){
+BOTUI.info_class_cancel = function(){
+    BOTUI.botui.message.bot({
+        //サーバー班が行っているスクレイピングで取得した情報を動的に表示．
+        delay: 1000,
+		type: "text",
+        content: "解析学Ⅰ　SS　病気\n\n\
+        線形代数学Ⅰ　SS　病気\n\n\
+        "
+	}).then(function(){
+        BOTUI.isRestart();
+    })
+}
+
+BOTUI.syllabus = function(){
+    BOTUI.botui.message.bot({
+        delay:1500,
+        type: "text",
+        content: 'キーワードを入力してください'
+    });
+    
+    return BOTUI.botui.action.text({
+        delay: 1000,
+        action: {
+          placeholder: '例：計算機ハードウェア'
+        }
+    }).then(function(res){
+        var tmp = res.value;
+        BOTUI.getInfoAboutLecture(tmp);
+    });
+}
+
+BOTUI.getInfoAboutLecture = function(res){
+    BOTUI.botui.message.bot({
+        type: "text",
+        content: res.value + 'は' + 'です'
+    }).then(function(){
+        BOTUI.isRestart();
+    })
+}
+
+BOTUI.buildingName = function(){
+    return BOTUI.botui.action.text({
+        delay: 1000,
+        action: {
+          placeholder: '(英数字は半角) 例:TC1'
+        }
+    }).then(function(res){
+        var tmp = res.value;
+        BOTUI.retName(tmp);
+    });
+}
+
+BOTUI.retName = function(res){
+    BOTUI.botui.message.bot({
+        type: "text",
+        content: res.value + 'は' + 'です'
+    }).then(function(){
+        BOTUI.isRestart();
+    })
+}
+
+BOTUI.inputRep = function(){
     BOTUI.botui.message.bot({
         delay:1500,
         type: "text",
