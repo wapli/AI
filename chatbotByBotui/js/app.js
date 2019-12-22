@@ -76,14 +76,21 @@ BOTUI.select = function () {
 
 BOTUI.info_class_cancel = function(){
     BOTUI.results = BOTUI.getData();
+    console.log(BOTUI.results);
     BOTUI.results = JSON.parse(BOTUI.results);　//文字列→JSONに変換
-    // console.log(typeof(BOTUI.results));
     // console.log(BOTUI.results);
     for(var i=0;i<BOTUI.results.length;i++){
+        // BOTUI.results[i].replace('{', '');
+        // BOTUI.results[i].replace('}', '');
+        // BOTUI.results[i].replace('"', '');
+        
         BOTUI.botui.message.bot({
             delay: 1000,
-            type: "text",
-            content: BOTUI.results[i]
+            type: "html",
+            content:  '日時: '  + BOTUI.results[i].日時+'<br>'+
+                      '時限: '   + BOTUI.results[i].時限+'講時<br>'+
+                      '講師名: ' + BOTUI.results[i].講師名+'<br>'+
+                      '講義名: ' + BOTUI.results[i].講義名
         })
     }
     i++;
