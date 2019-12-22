@@ -5,13 +5,10 @@ var BOTUI = BOTUI || {};
 // ====================================
 // 変数名定義
 // ====================================
-//DB用の変数
-BOTUI.results　= 0;
-//チャットボット用の変数
 BOTUI.botui = new BotUI("bot_app");
 BOTUI.url = 'https://api.github.com/search/repositories?q=';
 BOTUI.key = 0;
-//これは後でDBに格納しても良いかもしれない．
+BOTUI.results　= 0; //休講情報が格納される
 BOTUI.buildingNameMap = new Map([
     ['TC1','知真館1号館'],['TC2','知真館2号館'],['TC3','知真館3号館'],
     ['KD','	恵道館'],['TS','頌真館'],['MK','夢告館'],
@@ -26,23 +23,6 @@ BOTUI.buildingNameMap = new Map([
 // ====================================
 //　関数定義（データベース）
 // ====================================
-
-    // レコードを全件表示する
-    // 試しに関数にしてみただけ
-// BOTUI.getAllData =  function(){
-//         $.get("js/dbClassCancel.php",
-//             function(res){
-//                 //$.each(data, function(key, value){
-//                     //console.log(value);
-//                     //$('#all_show_result').append("<tr><td>" + value.id + "</td><td>" + value.name + "</td><td>" + value.price + "</td></tr>");
-//                 //});
-//                 console.log("通信成功");
-//                 console.log(res);
-//                 return res;
-//             }
-//         );
-//     }
-
 BOTUI.getData = function(){
     var tmp = $.ajax({
         type: 'GET',
@@ -70,7 +50,7 @@ BOTUI.select = function () {
     BOTUI.botui.action.button({
         delay: 300,
         action: [{icon: "search", text: "休講情報", value: "休講情報をおしえて！"},
-                { icon: "search", text: "シラバス", value: "シラバスを検索したい！" },
+                // { icon: "search", text: "シラバス", value: "シラバスを検索したい！" },
                 { icon: "search", text: "館名の略記から建物名を調べる", value: "略記が表す建物を知りたい！" },
                 //{ icon: "search", text: "", value: "シラバス" },wi-fi, チャージ場所等
                 { icon: "search", text: "レポジトリ数の検索", value: "レポジトリの数を教えて！" }
@@ -82,9 +62,9 @@ BOTUI.select = function () {
         if(res.value === "休講情報をおしえて！"){
             BOTUI.info_class_cancel();
         }
-        else if(res.value === "シラバスを検索したい！"){
-            BOTUI.syllabus();
-        }
+        // else if(res.value === "シラバスを検索したい！"){
+        //     BOTUI.syllabus();
+        // }
         else if(res.value === "略記が表す建物を知りたい！"){
             BOTUI.buildingName();
         }
@@ -96,14 +76,11 @@ BOTUI.select = function () {
 
 BOTUI.info_class_cancel = function(){
     BOTUI.results = BOTUI.getData();
-    
-    
-    BOTUI.results = JSON.parse(BOTUI.results);
-    console.log(typeof(BOTUI.results));
-    console.log(BOTUI.results);
+    BOTUI.results = JSON.parse(BOTUI.results);　//文字列→JSONに変換
+    // console.log(typeof(BOTUI.results));
+    // console.log(BOTUI.results);
     for(var i=0;i<BOTUI.results.length;i++){
         BOTUI.botui.message.bot({
-            //サーバー班が行っているスクレイピングで取得した情報を動的に表示．
             delay: 1000,
             type: "text",
             content: BOTUI.results[i]
@@ -115,35 +92,33 @@ BOTUI.info_class_cancel = function(){
         BOTUI.isRestartFromTop();
     }
 }
+
+// BOTUI.syllabus = function(){
+//     BOTUI.botui.message.bot({
+//         delay:1500,
+//         type: "text",
+//         content: 'キーワードを入力してください'
+//     });
     
+//     return BOTUI.botui.action.text({
+//         delay: 1000,
+//         action: {
+//           placeholder: '例：計算機ハードウェア'
+//         }
+//     }).then(function(res){
+//         var tmp = res.value;
+//         BOTUI.getInfoAboutLecture(tmp);
+//     });
+// }
 
-
-BOTUI.syllabus = function(){
-    BOTUI.botui.message.bot({
-        delay:1500,
-        type: "text",
-        content: 'キーワードを入力してください'
-    });
-    
-    return BOTUI.botui.action.text({
-        delay: 1000,
-        action: {
-          placeholder: '例：計算機ハードウェア'
-        }
-    }).then(function(res){
-        var tmp = res.value;
-        BOTUI.getInfoAboutLecture(tmp);
-    });
-}
-
-BOTUI.getInfoAboutLecture = function(res){
-    BOTUI.botui.message.bot({
-        type: "text",
-        content: res.value + 'は' + 'です'
-    }).then(function(){
-        BOTUI.isRestartFromSameFunc('syllabus');
-    })
-}
+// BOTUI.getInfoAboutLecture = function(res){
+//     BOTUI.botui.message.bot({
+//         type: "text",
+//         content: res.value + 'は' + 'です'
+//     }).then(function(){
+//         BOTUI.isRestartFromSameFunc('syllabus');
+//     })
+// }
 
 BOTUI.buildingName = function(){
     BOTUI.botui.message.bot({
