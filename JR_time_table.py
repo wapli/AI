@@ -1,5 +1,5 @@
-## 近鉄奈良線時刻表
-## https://www.kintetsu.co.jp/railway/rosen/A50002R.html#nanba_nara
+## JR東西線時刻表
+## https://time.ekitan.com/train/TimeStation/47-8_D1_DW0.shtml
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import chromedriver_binary
