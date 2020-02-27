@@ -5,6 +5,8 @@ from selenium.webdriver.chrome.options import Options
 import chromedriver_binary
 import re
 import copy
+import csv
+import pprint
 
 options = Options()
 options.add_argument('--headless')
@@ -37,3 +39,7 @@ for i in range(0, len(split_text)-1):
 res.append(copy.copy(tmp))
 
 driver.quit()
+
+with open('time_table.csv', 'w') as f:
+    writer = csv.writer(f, lineterminator="\n")
+    writer.writerows(res)
